@@ -397,7 +397,7 @@ function Underlay-Copy {
 		$out.Close()
 		$fs.Close()
 	}
-	if ($mode -eq "fsutil")
+	if ($mode -eq "Metadata")
 	{
 		$extents = Get-FileExtents-Fsutil -SourceFile $SourceFile
 		Write-Host "Found $($extents.Count) extent(s)"
@@ -408,3 +408,4 @@ function Underlay-Copy {
 	Write-Host "File copied successfully to $DestinationFile"
 
 }
+
